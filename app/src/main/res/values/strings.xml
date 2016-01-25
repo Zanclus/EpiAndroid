@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EpiAndroid</string>
+    <string name="login">Ton login</string>
+    <string name="action_sign_in">Se connecter</string>
+    <string name="action_sign_in_short">Se connecter</string>
+    <string name="prompt_password">Ton password</string>
+    <string name="error_password">Invalid Password</string>
+    <string name="error_login">Invalid Login</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
