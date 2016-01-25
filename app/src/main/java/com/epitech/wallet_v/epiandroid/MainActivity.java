@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isLoginValid(String login) {
-        return (login.contains("_") && login.length() == 8);
+        return (login.contains("_") && login.length() >= 6);
     }
 
     private boolean errorFieldLogIn () {
@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
                                 Log.v("Login function", "succes 2");
                                 Object token = response.get("token");
                                 EpitechApi.setToken(token.toString());
-                                Toast.makeText(getApplicationContext(), "SUCCESS GO TO THE NEXT ACTIVITY", Toast.LENGTH_LONG).show();
                                 logInSucces();
                             } catch (JSONException e) {
                                 Log.v("Login function", "exception");

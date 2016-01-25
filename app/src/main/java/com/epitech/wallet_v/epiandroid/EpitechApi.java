@@ -36,10 +36,6 @@ public class EpitechApi {
 
         requestParams.put("login", login);
         requestParams.put("password", password);
-        Log.v("login", login);
-        Log.v("password", password);
-        Log.v("login", "before the post");
         client.post("https://epitech-api.herokuapp.com/login", requestParams, callback);
-        Log.v("login", "after the post");
     }
 }
