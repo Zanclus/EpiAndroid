@@ -20,6 +20,8 @@ import cz.msebera.android.httpclient.Header;
 
 public class EpitechApi {
     private static String _token;
+    private static String _login;
+    private final static String URL = "https://epitech-api.herokuapp.com/";
 
     public static void setToken(String _token) {
         EpitechApi._token = _token;
@@ -29,13 +31,22 @@ public class EpitechApi {
         return (_token);
     }
 
-    public static void login(String login, String password, JsonHttpResponseHandler callback)
-    {
+    public static void login(String login, String password, JsonHttpResponseHandler callback) {
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
 
+        _login = login;
         requestParams.put("login", login);
         requestParams.put("password", password);
-        client.post("https://epitech-api.herokuapp.com/login", requestParams, callback);
+        client.post(EpitechApi.URL + "login", requestParams, callback);
+    }
+
+    public static void infos(JsonHttpResponseHandler callback) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams requestParams = new RequestParams();
+
+        requestParams.put("token", _token);
+        requestParams.put("user", _login);
+        client.get(EpitechApi.URL + "user", requestParams, callback);
     }
 }
