@@ -49,4 +49,15 @@ public class EpitechApi {
         requestParams.put("user", _login);
         client.get(EpitechApi.URL + "user", requestParams, callback);
     }
+
+    public static void trombi(String year, String location, JsonHttpResponseHandler callback) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams requestParams = new RequestParams();
+
+        requestParams.put("token", _token);
+        requestParams.put("year", year);
+        requestParams.put("location", location);
+        requestParams.put("promo", "tek3");
+        client.get(EpitechApi.URL + "trombi", requestParams, callback);
+    }
 }

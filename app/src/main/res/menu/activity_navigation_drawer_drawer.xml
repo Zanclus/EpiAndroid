@@ -18,5 +18,9 @@
             android:id="@+id/nav_manage"
             android:icon="@mipmap/ic_extension_black_24dp"
             android:title="Projets" />
+        <item
+            android:id="@+id/nav_trombi"
+            android:icon="@mipmap/ic_extension_black_24dp"
+            android:title="Trombi" />
     </group>
 </menu>
