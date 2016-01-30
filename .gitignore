@@ -15,10 +15,8 @@ gen/
 # Gradle files
 .gradle/
 build/
-.idea/gradle.xml
-.idea/libraries
-.idea/libraries/*.xml
-.idea/workspace.xml
+**/.idea/gradle.xml
+**/.idea/libraries
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -36,6 +34,6 @@ proguard/
 captures/
 
 # User-specific stuff
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/dictionaries
