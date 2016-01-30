@@ -68,4 +68,14 @@ public class EpitechApi {
         requestParams.put("user", user);
         client.get(EpitechApi.URL + "user", requestParams, callback);
     }
+
+    public static void planning(String start, String end, JsonHttpResponseHandler callback) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams requestParams = new RequestParams();
+
+        requestParams.put("token", _token);
+        requestParams.put("start", start);
+        requestParams.put("end", end);
+        client.get(EpitechApi.URL + "planning", requestParams, callback);
+    }
 }
