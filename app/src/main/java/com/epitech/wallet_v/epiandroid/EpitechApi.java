@@ -60,4 +60,12 @@ public class EpitechApi {
         requestParams.put("promo", "tek3");
         client.get(EpitechApi.URL + "trombi", requestParams, callback);
     }
+    public static void user(String user, JsonHttpResponseHandler callback) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams requestParams = new RequestParams();
+
+        requestParams.put("token", _token);
+        requestParams.put("user", user);
+        client.get(EpitechApi.URL + "user", requestParams, callback);
+    }
 }

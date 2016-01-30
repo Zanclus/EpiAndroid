@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,7 @@ import cz.msebera.android.httpclient.Header;
 public class TrombiFragment extends Fragment {
 
     private ArrayList<People> arraylist = new ArrayList<People>();
+    private View fragView;
     class People {
        public String title;
        public String login;

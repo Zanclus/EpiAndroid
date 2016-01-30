@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:id="@+id/search_img"
+        android:src="#c10909"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="N/A"
+        android:id="@+id/search_title"
+        android:capitalize="words"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/search_img"
+        android:layout_toEndOf="@+id/search_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Location :"
+        android:id="@+id/Location"
+        android:layout_alignBottom="@+id/search_img"
+        android:layout_toRightOf="@+id/search_img"
+        android:layout_toEndOf="@+id/search_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Crédits :"
+        android:id="@+id/Credits"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/search_img"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_credits"
+        android:layout_alignBottom="@+id/Credits"
+        android:layout_toRightOf="@+id/Credits"
+        android:layout_toEndOf="@+id/Credits"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Course :"
+        android:id="@+id/UID"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/Credits"
+        android:layout_toLeftOf="@+id/search_credits"
+        android:layout_toStartOf="@+id/search_credits" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_course"
+        android:layout_alignBottom="@+id/UID"
+        android:layout_alignLeft="@+id/search_credits"
+        android:layout_alignStart="@+id/search_credits" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Email :"
+        android:id="@+id/Email"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/UID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_email"
+        android:layout_alignBottom="@+id/Email"
+        android:layout_alignLeft="@+id/search_course"
+        android:layout_alignStart="@+id/search_course" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="GPA :"
+        android:id="@+id/GPA"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/Email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_gpa"
+        android:layout_alignBottom="@+id/GPA"
+        android:layout_alignLeft="@+id/search_email"
+        android:layout_alignStart="@+id/search_email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Semester :"
+        android:id="@+id/textView"
+        android:layout_above="@+id/Location"
+        android:layout_toRightOf="@+id/search_img"
+        android:layout_toEndOf="@+id/search_img"
+        android:layout_marginBottom="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_semester"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/search_location"
+        android:layout_alignStart="@+id/search_location" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_location"
+        android:layout_alignBottom="@+id/search_img"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="N/A"
+        android:id="@+id/search_login"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/textView"
+        android:layout_alignLeft="@+id/search_title"
+        android:layout_alignStart="@+id/search_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Promo :"
+        android:id="@+id/PROMO"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/GPA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_promo"
+        android:layout_alignBottom="@+id/PROMO"
+        android:layout_alignLeft="@+id/search_gpa"
+        android:layout_alignStart="@+id/search_gpa" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Phone :"
+        android:id="@+id/textView2"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/PROMO"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A"
+        android:id="@+id/search_phone"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/search_promo"
+        android:layout_alignStart="@+id/search_promo" />
+
+</RelativeLayout>
