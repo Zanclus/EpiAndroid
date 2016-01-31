@@ -15,6 +15,8 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 import cz.msebera.android.httpclient.Header;
 
 
@@ -39,6 +41,10 @@ public class HomeFragment extends Fragment {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
                     Picasso.with(getContext()).load(response.get("picture").toString()).into((ImageView)view.findViewById(R.id.profile_picture));
+                    EpitechApi.setCourse(response.getString("course_code"));
+                    EpitechApi.setLocation(response.getString("location"));
+                    EpitechApi.setYear(Calendar.getInstance().get(Calendar.YEAR) - 1);
+                    System.out.println(EpitechApi.getYear());
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

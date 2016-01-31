@@ -16,15 +16,15 @@
             android:title="Modules" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@mipmap/ic_extension_black_24dp"
+            android:icon="@drawable/ic_action_action_description"
             android:title="Projets" />
         <item
             android:id="@+id/nav_search"
-            android:icon="@mipmap/ic_extension_black_24dp"
+            android:icon="@drawable/ic_action_action_search"
             android:title="Search" />
         <item
             android:id="@+id/nav_trombi"
-            android:icon="@mipmap/ic_extension_black_24dp"
+            android:icon="@drawable/ic_action_social_people"
             android:title="Trombi" />
     </group>
 </menu>
