@@ -43,4 +43,5 @@
         android:layout_below="@+id/item_txtlogin"
         android:layout_toRightOf="@+id/item_imgtrombi"
         android:layout_toEndOf="@+id/item_imgtrombi" />
+
 </RelativeLayout>

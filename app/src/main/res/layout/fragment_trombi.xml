@@ -7,12 +7,46 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
+        android:id="@+id/trombi_tek"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown"
+        android:entries="@array/trombi_tek"
+        android:focusable="false"
+        android:gravity="center_vertical|center" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trombi_location"
+        android:layout_below="@+id/trombi_tek"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown"
+        android:entries="@array/trombi_location"
+        android:gravity="center_vertical|center" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trombi_year"
+        android:layout_below="@+id/trombi_location"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown"
+        android:entries="@array/trombi_year"
+        android:gravity="center_vertical|center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/trombi_button"
+        android:layout_below="@+id/trombi_location"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -21,6 +55,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/spinner" />
+        android:layout_below="@+id/trombi_button" />
 
 </RelativeLayout>

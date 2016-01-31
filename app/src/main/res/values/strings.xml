@@ -16,4 +16,30 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="string" />
+    <string-array name="trombi_tek">
+        <item>tek1</item>
+        <item>tek2</item>
+        <item>tek3</item>
+        <item>tek4</item>
+        <item>tek5</item>
+    </string-array>
+    <string-array name="trombi_location">
+        <item>FR/BDX</item>
+        <item>FR/PAR</item>
+        <item>FR/TLS</item>
+        <item>FR/LIL</item>
+        <item>FR/LYN</item>
+        <item>FR/MAR</item>
+        <item>FR/MPL</item>
+        <item>FR/NCY</item>
+        <item>FR/NAN</item>
+        <item>FR/NCE</item>
+        <item>FR/REN</item>
+        <item>FR/STG</item>
+    </string-array>
+    <string-array name="trombi_year">
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+    </string-array>
 </resources>

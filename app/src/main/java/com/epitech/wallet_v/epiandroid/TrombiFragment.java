@@ -1,19 +1,16 @@
 package com.epitech.wallet_v.epiandroid;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -34,6 +31,10 @@ public class TrombiFragment extends Fragment {
 
     private ArrayList<People> arraylist = new ArrayList<People>();
     private View fragView;
+    private Spinner tek;
+    private Spinner location;
+    private Spinner year;
+    private Button valid_trombi;
     class People {
        public String title;
        public String login;
@@ -48,13 +49,30 @@ public class TrombiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_trombi, container, false);
-        EpitechApi.trombi("2015", "FR/BDX", new JsonHttpResponseHandler() {
+        fragView = view;
+        tek = (Spinner) view.findViewById(R.id.trombi_tek);
+        location = (Spinner) view.findViewById(R.id.trombi_location);
+        year = (Spinner) view.findViewById(R.id.trombi_year);
+        valid_trombi = (Button) view.findViewById(R.id.trombi_button);
+        valid_trombi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                makeRequest(0);
+            }
+        });
+        return view;
+    }
+
+    private void    makeRequest(final Integer offset) {
+        EpitechApi.trombi(year.getSelectedItem().toString(), location.getSelectedItem().toString(), tek.getSelectedItem().toString(), offset, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
-                    System.out.println(response.toString());
-                    fillInTrombi(response.getJSONArray("items"));
-                    fillInTrombiView(view);
+                    if (response.has("items")) {
+                        fillInTrombi(response.getJSONArray("items"));
+                        fillInTrombiView(fragView);
+                        makeRequest(offset + 48);
+                    }
                 }
                 catch (JSONException e)
                 {
@@ -67,9 +85,8 @@ public class TrombiFragment extends Fragment {
                 Log.v("Fail request trombi", String.valueOf(errorResponse));
             }
         });
-        return view;
-    }
 
+    }
     private void    fillInTrombi(JSONArray peoplearray)
     {
         try {
@@ -94,6 +111,7 @@ public class TrombiFragment extends Fragment {
         ListView list = (ListView) view.findViewById(R.id.trombiListView);
         list.setAdapter(adapter);
     }
+
     private class TrombiArrayAdapter extends ArrayAdapter<People> {
         public TrombiArrayAdapter() {
             super(getActivity(), R.layout.trombi_item, arraylist);
