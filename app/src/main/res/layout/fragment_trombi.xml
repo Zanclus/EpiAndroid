@@ -41,7 +41,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="@string/search"
         android:id="@+id/trombi_button"
         android:layout_below="@+id/trombi_location"
         android:layout_alignParentRight="true"

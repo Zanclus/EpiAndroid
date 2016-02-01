@@ -86,6 +86,7 @@ public class SearchFragment extends Fragment {
     private void    fillInSearch(JSONObject peopledata)
     {
         try {
+                arraylist = new ArrayList<>();
                 JSONObject people_data = peopledata;
                 PeopleS result = new PeopleS();
                 result.title = people_data.getString("title");
@@ -100,7 +101,7 @@ public class SearchFragment extends Fragment {
                 result.promo = people_data.getString("promo");
                 if (people_data.getJSONObject("userinfo").has("telephone"))
                     result.phone = people_data.getJSONObject("userinfo").getJSONObject("telephone").getString("value");
-                arraylist.add(result);
+            arraylist.add(result);
         } catch (JSONException e) {
             e.printStackTrace();
         }

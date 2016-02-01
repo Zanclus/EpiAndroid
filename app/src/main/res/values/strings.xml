@@ -7,6 +7,23 @@
     <string name="error_password">Invalid Password</string>
     <string name="error_login">Invalid Login</string>
     <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="notdefined">N/A</string>
+    <string name="semester">Semestre :</string>
+    <string name="location">Location :</string>
+    <string name="credits">Crédits :</string>
+    <string name="title">Titre :</string>
+    <string name="code">Code :</string>
+    <string name="status">Status :</string>
+    <string name="end">Fin :</string>
+    <string name="inscription">Inscription :</string>
+    <string name="rights">Droits :</string>
+    <string name="course">Cursus :</string>
+    <string name="email">Email :</string>
+    <string name="gpa">GPA :</string>
+    <string name="promo">Promo :</string>
+    <string name="phone">Phone :</string>
+    <string name="searchlogin">Tapez un login à rechercher...</string>
+    <string name="search">Chercher</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
