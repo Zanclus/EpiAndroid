@@ -116,8 +116,6 @@ public class NavigationDrawer extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_manage) {
-
         } else if (id == R.id.nav_trombi) {
             TrombiFragment fragment = new TrombiFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

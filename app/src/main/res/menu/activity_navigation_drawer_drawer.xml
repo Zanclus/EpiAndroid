@@ -15,10 +15,6 @@
             android:icon="@mipmap/ic_view_module_black_24dp"
             android:title="Modules" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_action_action_description"
-            android:title="Projets" />
-        <item
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_action_action_search"
             android:title="Search" />

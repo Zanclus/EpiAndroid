@@ -24,6 +24,8 @@ public class EpitechApi {
     private static Integer _year;
     private static String _location;
     private static String _course;
+    private static Double _logTime;
+
     private final static String URL = "https://epitech-api.herokuapp.com/";
 
     public static void setToken(String _token) {
@@ -77,6 +79,14 @@ public class EpitechApi {
         client.get(EpitechApi.URL + "user", requestParams, callback);
     }
 
+    public static void messages(JsonHttpResponseHandler callback) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams requestParams = new RequestParams();
+
+        requestParams.put("token", _token);
+        client.get(EpitechApi.URL + "infos", requestParams, callback);
+    }
+
     public static void trombi(String year, String location, String tek, Integer offset, JsonHttpResponseHandler callback) {
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
@@ -118,5 +128,13 @@ public class EpitechApi {
         requestParams.put("course", _course);
         requestParams.put("scolaryear", _year.toString());
         client.get(EpitechApi.URL + "allmodules", requestParams, callback);
+    }
+
+    public static Double get_logTime() {
+        return _logTime;
+    }
+
+    public static void set_logTime(Double _logTime) {
+        EpitechApi._logTime = _logTime;
     }
 }
