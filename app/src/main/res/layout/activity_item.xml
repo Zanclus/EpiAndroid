@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/notdefined"
+        android:id="@+id/item_activityTitle"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/notdefined"
+        android:id="@+id/item_activityStart"
+        android:layout_below="@+id/item_activityTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/notdefined"
+        android:id="@+id/item_activityEnd"
+        android:layout_below="@+id/item_activityTitle"
+        android:layout_toRightOf="@+id/item_activityStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/notdefined"
+        android:id="@+id/item_activityRoom"
+        android:layout_below="@+id/item_activityEnd" />
+
+</RelativeLayout>

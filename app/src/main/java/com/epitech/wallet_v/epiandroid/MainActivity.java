@@ -71,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
 //        if (!errorFieldLogIn()) {
 //            focusView.requestFocus();
 //        } else {
-            EpitechApi.login(/*mLogin.getText().toString()*/"tran_0",
-                    /*mPassword.getText().toString()*/"9Pwl0|QS", new JsonHttpResponseHandler() {
+            EpitechApi.login(mLogin.getText().toString(), mPassword.getText().toString(), new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                             Log.v("Login function", "succes");
