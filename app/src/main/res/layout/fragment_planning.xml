@@ -15,7 +15,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/activitiesListView"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/currentDate" />
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/button"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jour suivant"
+        android:id="@+id/button"
+        android:layout_below="@+id/currentDate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jour precedent"
+        android:id="@+id/button2"
+        android:layout_below="@+id/currentDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

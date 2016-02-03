@@ -6,7 +6,7 @@
     <string name="prompt_password">Ton password</string>
     <string name="error_password">Invalid Password</string>
     <string name="error_login">Invalid Login</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="title_activity_navigation_drawer">EpiAndroid</string>
     <string name="notdefined">N/A</string>
     <string name="semester">Semestre :</string>
     <string name="location">Location :</string>

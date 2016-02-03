@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,8 +19,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -32,6 +35,7 @@ import cz.msebera.android.httpclient.Header;
  */
 public class PlanningFragment extends Fragment {
 
+    private String dateOfDay;
 
     public class Activity {
         // Keys
@@ -59,15 +63,58 @@ public class PlanningFragment extends Fragment {
         TextView cDate = (TextView) view.findViewById(R.id.currentDate);
         String myDateFormat = "EEEE d MMM";
         String apiDateFormat = "yyyy-MM-d";
-        SimpleDateFormat mySdf = new SimpleDateFormat(myDateFormat);
+        final SimpleDateFormat mySdf = new SimpleDateFormat(myDateFormat);
         SimpleDateFormat apiSdf = new SimpleDateFormat(apiDateFormat);
         cDate.setText(mySdf.format(d));
-
+        dateOfDay = apiSdf.format(d);
         // Get Activities of the Current Planning Date
         String startRequest = apiSdf.format(d);
         String endRequest = apiSdf.format(d); // Same fmt & Same day
         getActivities(startRequest, endRequest);
-
+        Button button = (Button) view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //mettre a jour les activités
+                arraylist.clear();
+                String dt = dateOfDay;
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-d");
+                Calendar c = Calendar.getInstance();
+                try {
+                    c.setTime(sdf.parse(dt));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                c.add(Calendar.DATE, 1);
+                dateOfDay = sdf.format(c.getTime());
+                // mettre a jour la date en haut
+                TextView cDate = (TextView) view.findViewById(R.id.currentDate);
+                cDate.setText(dateOfDay);
+                getActivities(dateOfDay, dateOfDay);
+            }
+        });
+        Button button2 = (Button) view.findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //mettre a jour les activités
+                arraylist.clear();
+                String dt = dateOfDay;
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-d");
+                Calendar c = Calendar.getInstance();
+                try {
+                    c.setTime(sdf.parse(dt));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                c.add(Calendar.DATE, -1);
+                dateOfDay = sdf.format(c.getTime());
+                // mettre a jour la date en haut
+                TextView cDate = (TextView) view.findViewById(R.id.currentDate);
+                cDate.setText(dateOfDay);
+                getActivities(dateOfDay, dateOfDay);
+            }
+        });
         return view;
     }
 
